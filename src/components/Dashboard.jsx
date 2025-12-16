@@ -8,6 +8,8 @@ const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("info");
   const navigate = useNavigate();
 
+  console.log(JSON.parse(localStorage.getItem("users")));
+
   const logout = () => {
     localStorage.removeItem("currentUser");
     localStorage.removeItem("isAuth");
