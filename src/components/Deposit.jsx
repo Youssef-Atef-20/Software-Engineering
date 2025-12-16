@@ -9,6 +9,8 @@ const Deposit = () => {
 
     user.balance += Number(amount);
 
+    alert(`Successfully deposited $${amount}`);
+
     const updatedUsers = users.map(u =>
       u.username === user.username ? user : u
     );

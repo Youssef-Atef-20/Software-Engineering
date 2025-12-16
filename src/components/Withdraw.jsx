@@ -5,7 +5,14 @@ const Withdraw = () => {
 
   const handleWithdraw = () => {
     const user = JSON.parse(localStorage.getItem("currentUser"));
-    if (Number(amount) > user.balance) return;
+    if (Number(amount) > user.balance){
+      alert("Insufficient funds");
+      return;
+    }
+
+    alert(`Successfully withdrew $${amount}`);
+      
+    
 
     const users = JSON.parse(localStorage.getItem("users"));
 
