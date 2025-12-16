@@ -6,32 +6,36 @@ import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard";
 
-
 function App() {
+  const isAuth = localStorage.getItem("isAuth");
+
   return (
     <Layout>
       <Routes>
+
         
         <Route
           path="/"
           element={
+            isAuth ? <Navigate to="/dashboard" /> : <Login />
+          }
+        />
+
+        <Route path="/signup" element={<SignUp />} />
+
+       
+        <Route
+          path="/dashboard"
+          element={
             <Auth>
-              <Login />
+              <Dashboard />
             </Auth>
           }
         />
 
-        
-        <Route path="/signup" element={<SignUp />} />
-
-        
-        <Route
-          path="/dashboard"
-          element={<Dashboard />}
-        />
-
-       
+        {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
+
       </Routes>
     </Layout>
   );
