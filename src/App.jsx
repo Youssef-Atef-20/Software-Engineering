@@ -5,15 +5,17 @@ import Auth from "./components/Auth";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard";
+import Snowfall from "react-snowfall";
 
 function App() {
   const isAuth = localStorage.getItem("isAuth");
 
   return (
+    
     <Layout>
       <Routes>
 
-        
+        <Snowfall />
         <Route
           path="/"
           element={
