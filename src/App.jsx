@@ -15,7 +15,7 @@ function App() {
     <Layout>
       <Routes>
 
-        <Snowfall />
+        <Snowfall color="#82C3D9" />
         <Route
           path="/"
           element={
