@@ -11,11 +11,12 @@ function App() {
   const isAuth = localStorage.getItem("isAuth");
 
   return (
-    
+   
     <Layout>
+        <Snowfall color="#82C3D9" />
       <Routes>
 
-        <Snowfall color="#82C3D9" />
+       
         <Route
           path="/"
           element={
