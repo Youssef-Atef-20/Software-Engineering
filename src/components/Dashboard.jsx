@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("info");
   const navigate = useNavigate();
-  const user1 = JSON.parse(localStorage.getItem("users"));
+
   
 
   const logout = () => {
